@@ -110,6 +110,9 @@ class gadgetfinder():
                         self.bl_list.append(baddr)
                         addr = baddr
                     else: break
+            elif (command.startswith("L  ") or command.startswith("ST  ")) and "h" in command:
+                addr = add2(addr)
+                addr = add2(addr)
             else:
                 addr = add2(addr)
         return output
