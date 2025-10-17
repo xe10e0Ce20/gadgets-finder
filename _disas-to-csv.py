@@ -58,7 +58,7 @@ def process_and_convert_to_csv(input_filename, output_filename):
                 col1 = temp_line[:match1.start()]
                 col2 = temp_line[match1.start() + 1 : start2_in_temp]
                 col3_raw = temp_line[end2_in_temp:]
-
+                col1 = col1[1:]
 
                 # --- 步骤 3: 标准化列 3 的空格 ---
                 
