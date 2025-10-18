@@ -92,7 +92,9 @@ class gadgetfinder():
                 output.append(gadget)
                 break
             elif command.startswith("BC") and not command.startswith("BC  AL"):
-                if ignore_BC_command: break
+                if ignore_BC_command: 
+                    add2(addr)
+                    break
                 else: 
                     baddr = getbaddr(command)
                     if not baddr in self.bl_list:
